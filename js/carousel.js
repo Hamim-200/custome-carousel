@@ -7,19 +7,18 @@ const images = [
     'image/image6.jpg',
     'image/image7.jpg',
     'image/image8.jpg',
+    'image/image9.jpg',
 
 ]
 
 let imgIndex = 0;
-const img = document.getElementById('carousel-img');
-setInterval(() => {
-    if (imgIndex === images.length) {
+const imgEl = document.getElementById('slider-img');
+setInterval( () => {
+    if(imgIndex === images.length){
         imgIndex = 0;
     }
-    const imgLink = images[imgIndex];
-    img.setAttribute('src', imgLink);
-    console.log(imgLink)
+    const imgUrl = images[imgIndex];
+    // console.log(imgIndex, imgUrl);
+    imgEl.setAttribute('src', imgUrl);
     imgIndex++;
-
-
-}, 2000)
+} , 1000)
